@@ -7,7 +7,7 @@
     :background-color="themeMenu.background"
     :active-text-color="themeMenu.active_text"
   >
-    <div class="the-menu-logo">{{is_collapse?'IBP2':'智慧楼宇2.0平台'}}</div>
+    <div class="the-menu-logo">{{is_collapse?'WL':'wl-mfe'}}</div>
     <el-submenu v-for="sub of menu" :key="sub.id" :index="sub.id">
       <template slot="title">
         <i class="menu-icon" :class="sub.icon"></i>
