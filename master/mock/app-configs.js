@@ -2,23 +2,23 @@
 const appConfig = [
   {
     id: "1",
-    title: "OPCUA",
+    title: "demo1",
     icon: "el-icon-monitor",
-    module: "subapp-opcua",
+    module: "subapp-demo1",
     defaultRegister: true,
     devEntry: "//localhost:6751",
     depEntry: "http://",
-    routerBase: "/opcua",
+    routerBase: "/demo",
     children: [
       {
         id: "1-1",
         title: "home",
-        url: "/opcua"
+        url: "/demo"
       },
       {
         id: "1-2",
         title: "about",
-        url: "/opcua/about"
+        url: "/demo/about"
       }
     ]
   },
