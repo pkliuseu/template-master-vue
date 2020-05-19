@@ -32,7 +32,7 @@ function start() {
     console.error(i, 'error', stderr)
   });
   const data = fs.readFileSync('master/package.json').toString();
-  const json = JSON.parse(data) || 8080;
+  const json = JSON.parse(data) || { port: 8080 };
   exec('start http://localhost:' + json.port);
 };
 start();
