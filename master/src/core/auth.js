@@ -5,6 +5,7 @@
  */
 
 import store from "../store";
+import { DataType } from "wl-core"
 /**
 * @name 导入获取本地身份token函数
 */
@@ -49,7 +50,11 @@ const getAppConfigs = () => {
       return;
     }
     // 处理菜单状态共享
-    store.dispatch('menu/setMenu', _res);
+    let _menu = [];
+    _res.forEach(i => {
+      if (DataType.isArray(i.data)) _menu.push(...i.data)
+    })
+    store.dispatch('menu/setMenu', _menu);
     // 启用qiankun微前端应用
     qianKunStart(_res);
   })

@@ -4,49 +4,90 @@
 
 const subApps = [
   {
-    id: "1",
-    title: "wl-ui",
-    icon: "el-icon-monitor",
-    module: "subapp-ui",
-    defaultRegister: true,
+    module: "subapp-opcua",
+    defaultRegister: false,
     devEntry: "//localhost:6751",
-    depEntry: "http://ui.mfe.wlui.com.cn/",
-    routerBase: "/ui",
-    children: [
+    depEntry: "http://",
+    routerBase: "/opcua",
+    data: [
       {
-        id: "1-1",
-        title: "home",
-        url: "/ui"
-      },
-      {
-        id: "1-2",
-        title: "about",
-        url: "/ui/about"
+        title: "OPCUA",
+        icon: "el-icon-monitor",
+        id: "1",
+        children: [
+          {
+            id: "1-1",
+            title: "home",
+            url: "/opcua"
+          },
+          {
+            id: "1-2",
+            title: "about",
+            url: "/opcua/about"
+          }
+        ]
       }
     ]
   },
   {
-    id: "2",
-    title: "博客",
-    icon: "el-icon-date",
-    module: "subapp-blog",
+    module: "subapp-device",
     defaultRegister: false,
     devEntry: "//localhost:6752",
-    depEntry: "http://blog.mfe.wlui.com.cn",
-    routerBase: "/blog",
-    children: [
+    depEntry: "http://",
+    routerBase: "/device",
+    data: [
       {
-        id: "2-1",
-        title: "思否",
-        url: "/blog"
-      },
-      {
-        id: "2-2",
-        title: "掘金",
-        url: "/blog/juejin"
+        id: "2",
+        title: "设备管理",
+        icon: "el-icon-cpu",
+        children: [
+          {
+            id: "2-1",
+            title: "设备类型",
+            url: "/device/category"
+          },
+          {
+            id: "2-2",
+            title: "设备列表",
+            url: "/device/device"
+          },
+          {
+            id: "2-3",
+            title: "网关配置",
+            url: "/device/gateway"
+          }
+        ]
       }
     ]
-  }
+  },
+  // 用户管理
+  {
+    module: "subapp-user",
+    defaultRegister: true,
+    devEntry: "//localhost:6754",
+    depEntry: "http://",
+    routerBase: "/user",
+    data: [
+      {
+        id: "3",
+        title: "用户管理",
+        icon: "el-icon-user",
+        children: [
+          {
+            id: "3-1",
+            title: "组织机构",
+            url: "/user"
+          },
+          {
+            id: "3-2",
+            title: "岗位管理",
+            url: "/user/role"
+          }
+        ]
+      }
+    ]
+
+  },
 ]
 
 module.exports = subApps
