@@ -32,6 +32,8 @@ module.exports = {
       },
     }
   },
+  filenameHashing: true,
+  productionSourceMap: false,
   css: {
     loaderOptions: {
       sass: {
